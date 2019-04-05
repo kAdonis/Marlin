@@ -338,6 +338,8 @@ public:
         static int16_t contrast;
         static void set_contrast(const int16_t value);
         static inline void refresh_contrast() { set_contrast(contrast); }
+        static void sleepon();
+        static void sleepoff();
       #endif
 
       #if BOTH(FILAMENT_LCD_DISPLAY, SDSUPPORT)

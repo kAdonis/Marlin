@@ -33,6 +33,8 @@
 void GcodeSuite::M250() {
   if (parser.seen('C')) ui.set_contrast(parser.value_int());
   SERIAL_ECHOLNPAIR("LCD Contrast: ", ui.contrast);
+  if (parser.seen('S')) ui.sleepon();
+  if (parser.seen('W')) ui.sleepoff();
 }
 
 #endif // HAS_LCD_CONTRAST

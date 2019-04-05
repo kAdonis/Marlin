@@ -86,7 +86,9 @@ U8G_CLASS u8g(U8G_PARAM);
     contrast = constrain(value, LCD_CONTRAST_MIN, LCD_CONTRAST_MAX);
     u8g.setContrast(contrast);
   }
-
+  void MarlinUI::sleepon() {u8g.sleepOn();}
+  void MarlinUI::sleepoff() {u8g.sleepOff();}
+  
 #endif
 
 void MarlinUI::set_font(const MarlinFont font_nr) {

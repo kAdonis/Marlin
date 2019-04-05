@@ -152,6 +152,7 @@
   #define RAMPS_D10_PIN    P2_05   // (10)
 #endif
 
+#define ORIG_E0_AUTO_FAN_PIN P1_18 // (4) Kai (Servo3, ganz rechts) zum Mosfet Board, füt Wasserpumpe
 #define HEATER_0_PIN       RAMPS_D10_PIN
 
 #if ENABLED(IS_RAMPS_EFB)                      // Hotend, Fan, Bed
@@ -250,6 +251,35 @@
  * that the garbage/lines are erased immediately after the SD card accesses are completed.
  */
 
+//
+// kAdonis Display
+//
+
+// Requires #define U8GLIB_SH1106_EINSTART in Configuration.h
+// u8glib constructor
+// U8GLIB_SH1106_128X64 u8g(DOGLCD_SCK, DOGLCD_MOSI, DOGLCD_CS, LCD_PINS_DC, LCD_PINS_RS);
+
+#define LCD_PINS_DC         P0_16   // (16) J3-7 & AUX-4
+#define LCD_PINS_RS         P1_23   // (53) J3-5 & AUX-4
+// DOGM SPI LCD Support
+#define DOGLCD_CS           P0_15   // (52) (SCK)  J3-9 & AUX-3
+#define DOGLCD_MOSI         P2_11   // (35) J3-3 & AUX-4
+#define DOGLCD_SCK          P1_31   // (49) J3-1 & AUX-3 (NOT 5V tolerant)
+//#define DOGLCD_A0           P0_16   // (16) J3-7 & AUX-4
+#define DOGLCD_A0           LCD_PINS_DC
+
+//
+// LCD Display input pins
+//
+#define BEEPER_PIN       P0_18   // (51) (MOSI) J3-10 & AUX-3
+
+#define BTN_EN1          P3_25   // (33) J3-4 & AUX-4
+#define BTN_EN2          P2_06   // (59) J3-8 & AUX-2
+#define BTN_ENC          P3_26   // (31) J3-2 & AUX-4 
+
+#define KILL_PIN         P0_17   // (50) (MISO) J3-10 & AUX-3
+
+/**
 #if ENABLED(CR10_STOCKDISPLAY)
 
   // Re-Arm can support Creality stock display without SD card reader and single cable on EXP3.
@@ -337,6 +367,7 @@
   #endif
 
 #endif // ULTRA_LCD
+*/
 
 //
 // Ethernet pins
