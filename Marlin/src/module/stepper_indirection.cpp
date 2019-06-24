@@ -706,8 +706,8 @@
     pwmconf.pwm_autograd = true;
     pwmconf.pwm_autoscale = true;
     pwmconf.pwm_freq = 0b01;
-    pwmconf.pwm_grad = 14;
-    pwmconf.pwm_ofs = 36;
+    pwmconf.pwm_grad = 23; //23kai - 14default
+    pwmconf.pwm_ofs = 45; //45kai - 36default
     st.PWMCONF(pwmconf.sr);
 
     #if ENABLED(HYBRID_THRESHOLD)
