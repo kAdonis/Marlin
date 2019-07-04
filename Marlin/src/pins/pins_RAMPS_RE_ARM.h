@@ -427,6 +427,7 @@
   #endif
 
 #endif // HAS_SPI_LCD
+*/
 
 //
 // Ethernet pins
