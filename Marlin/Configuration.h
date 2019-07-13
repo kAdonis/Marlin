@@ -1968,13 +1968,6 @@
 //
 //#define SILVER_GATE_GLCD_CONTROLLER
 
-//
-// kAdonis OLED SSD1309
-// selfmade Display with 2.42 OLED over SPI
-//#define U8GLIB_SH1106_EINSTART //tested ok, but pixels missing
-#define MKS_12864OLED_SSD1306  // Uses the SSD1306 controller
-#define DEFAULT_LCD_CONTRAST 0
-
 //=============================================================================
 //==============================  OLED Displays  ==============================
 //=============================================================================
@@ -2011,6 +2004,13 @@
 // Einstart S OLED SSD1306
 //
 //#define U8GLIB_SH1106_EINSTART
+
+//
+// kAdonis OLED SSD1309
+// selfmade Display with 2.42 OLED over SPI
+//#define U8GLIB_SH1106_EINSTART //tested ok, but pixels missing
+#define MKS_12864OLED_SSD1306  // Uses the SSD1306 controller
+#define DEFAULT_LCD_CONTRAST 0
 
 //=============================================================================
 //========================== Extensible UI Displays ===========================
